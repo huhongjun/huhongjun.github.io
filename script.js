@@ -1,4 +1,4 @@
-const NAME = "GitHub 导航首页";
+const NAME = "Pastoral !";
 const WELCOME_MESSAGE_TEMPLATE = ["night", "morning", "afternoon", "evening"];
 
 // All shortcuts are in a `SHORTCUT_STARTER+shortcutKey` format. 
@@ -21,26 +21,43 @@ const MASTER_MAP = [
         ]
     },
     {
-        "groupName": "osmatrix",
+        "groupName": "AI Learning",
         "items":[
             {"name": "aaaa", "shortcutKey": "z", "url": "https://aaaa/", "tooltip": "aaaa"},
             {"name": "kodexplorer", "shortcutKey": "e", "url": "kodexplorer/", "tooltip": ""}
         ]
     },    
     {
-        "groupName": "osmatrix",
+        "groupName": "repository",
         "items":[
             {"name": "aaaa", "shortcutKey": "z", "url": "https://aaaa/", "tooltip": "aaaa"},
             {"name": "kodexplorer", "shortcutKey": "e", "url": "kodexplorer/", "tooltip": ""}
         ]
     },
     {
-        "groupName": "repository",
+        "groupName": "GitHub",
+        "items":[
+            {"name": "GitHub官方帮助文档", "shortcutKey": "z", "url": "https://help.github.com/cn/github", "tooltip": "部分已经有中文翻译."},
+            {"name": "GitHub Pages", "shortcutKey": "z", "url": "https://aaaa/", "tooltip": "aaaa"},
+            {"name": "Hugo", "shortcutKey": "z", "url": "https://aaaa/", "tooltip": "aaaa"},
+            {"name": "Hugo", "shortcutKey": "z", "url": "https://aaaa/", "tooltip": "aaaa"},
+            {"name": "octree", "shortcutKey": "e", "url": "kodexplorer/", "tooltip": ""}
+        ]        
+    },
+    {
+        "groupName": "EDLT",
+        "items":[
+            {"name": ":计算机编程类中文书籍", "shortcutKey": "z", "url": "https://github.com/nl8590687/free-programming-books-zh_CN", "tooltip": "aaaa"},
+            {"name": "kodexplorer", "shortcutKey": "e", "url": "kodexplorer/", "tooltip": ""}
+        ]
+    },
+    {
+        "groupName": "YBDL",
         "items":[
             {"name": "aaaa", "shortcutKey": "z", "url": "https://aaaa/", "tooltip": "aaaa"},
             {"name": "kodexplorer", "shortcutKey": "e", "url": "kodexplorer/", "tooltip": ""}
-        ]        
-    }         
+        ]
+    }                     
 ]    
 
 let $container = document.getElementById("content");
