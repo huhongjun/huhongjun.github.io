@@ -1,3 +1,11 @@
+# 关于本项目
+
+## 简介
+
+启用gh-pages,子域名智能用master分支;
+Jekyll相关文件: README.md,_config.yml;
+上传的静态文件:index.html,scripts.js,styles.css,assets目录;
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/huhongjun/huhongjun.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
