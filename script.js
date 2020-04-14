@@ -14,9 +14,9 @@ const SHORTCUT_TIMEOUT = 1500;
 // but intended to be used with just regular latin letters.
 const MASTER_MAP = [
     {
-        "groupName": "huhongjun",
+        "groupName": "open source",
         "items":[
-            {"name": "aaaa", "shortcutKey": "z", "url": "https://aaaa/", "tooltip": "aaaa"},
+            {"name": "Kubeflow docu(zh-CN)", "shortcutKey": "k", "url": "https://osmatrix.github.io/", "tooltip": "Kubeflow文档站点(中文版)"},
             {"name": "kodexplorer", "shortcutKey": "e", "url": "kodexplorer/", "tooltip": ""}
         ]
     },
@@ -35,7 +35,7 @@ const MASTER_MAP = [
         ]
     },
     {
-        "groupName": "osmatrix",
+        "groupName": "repository",
         "items":[
             {"name": "aaaa", "shortcutKey": "z", "url": "https://aaaa/", "tooltip": "aaaa"},
             {"name": "kodexplorer", "shortcutKey": "e", "url": "kodexplorer/", "tooltip": ""}
