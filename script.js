@@ -47,7 +47,7 @@ const MASTER_MAP = [
     {
         "groupName": "EDLT",
         "items":[
-            {"name": ":计算机编程类中文书籍", "shortcutKey": "z", "url": "https://github.com/nl8590687/free-programming-books-zh_CN", "tooltip": "aaaa"},
+            {"name": "计算机编程类中文书籍", "shortcutKey": "z", "url": "https://github.com/nl8590687/free-programming-books-zh_CN", "tooltip": "aaaa"},
             {"name": "kodexplorer", "shortcutKey": "e", "url": "kodexplorer/", "tooltip": ""}
         ]
     },
