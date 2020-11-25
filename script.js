@@ -16,8 +16,8 @@ const MASTER_MAP = [
     {
         "groupName": "open source",
         "items":[
-            {"name": "mydocu", "shortcutKey": "m", "url": "https://huhongjun.github.io/mkdocs-mydocu/", "tooltip": "退步集"},
-            {"name": "Kubeflow docu(zh-CN)", "shortcutKey": "k", "url": "https://osmatrix.github.io/", "tooltip": "Kubeflow文档站点(中文版)"},
+            {"name": "退步集", "shortcutKey": "m", "url": "https://huhongjun.github.io/mkdocs-mydocu/", "tooltip": "个人文档站点，日常工作记录与分享。"},
+            {"name": "Kubeflow文档站点(中文版)", "shortcutKey": "k", "url": "https://osmatrix.github.io/", "tooltip": "仓库osmatrix/osmatrix.github.io - Kubeflow文档站点(中文版)"},
             {"name": "kodexplorer", "shortcutKey": "e", "url": "kodexplorer/", "tooltip": ""}
         ]
     },

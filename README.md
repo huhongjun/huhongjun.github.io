@@ -2,44 +2,25 @@
 
 ## 简介
 
-启用gh-pages,子域名智能用master分支;  
+仓库用途：
+
+    - 发布静态网页，作为个人导航门户。
+    - 个人github使用记录。
+
+## 日常维护
+
+编辑scripts.js收录网站；
+
+Godaddy域名服务CNAME添加：portal指向huhongjun.github.io;
+
+## 仓库设置
+
+huhongjun/huhongjun.github.io，可以用huhongjun.github.io访问gh-page；  
+设置自定义域名portal.asmatrix.com；  
+启用gh-pages,指向master分支根目录;  
+
+## 文件说明
+
+顶层目录部署静态网页；  
 Jekyll相关文件: README.md,_config.yml;  
 上传的静态文件:index.html,scripts.js,styles.css,assets目录;
-
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/huhongjun/huhongjun.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/huhongjun/huhongjun.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
