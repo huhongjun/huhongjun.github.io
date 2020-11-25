@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Pastoral">
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>安装 - 退步集</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u5b89\u88c5";
+    var mkdocs_page_input_path = "synology/ds3617xs/ds3617xs-install.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> 退步集</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">aws使用记录</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../aws/aws-ec2.md">aws-ec2</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../aws/aws-install.md">安装</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../aws/aws-s3/">S3</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../aws/aws-vpn.md">vpn</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../aws/awscli/">awscli</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">开发主题</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../dev/chrome-extension/">Chrome扩展</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../dev/redmine/">Redmine</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">vscode</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../dev/vscode/vscode/">使用入门</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../dev/vscode/vscode-extension/">扩展开发</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../dev/vscode/remote-fs/">remote-fs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../dev/vscode/remote-browser/">remote-browser</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../dev/vscode/bash-debug/">bash-debug</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">devops入门</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../devops/ansible/ansible/">ansible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../devops/nginx/nginx/">nginx</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../devops/vscode/vscode.md">vscode</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../devops/weka/weka/">weka</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../devops/github/">github</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../devops/maven/">maven</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../devops/nexus/">nexus</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">深度学习修炼</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../dlearning/ml-lidar/">激光点云分类</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../dlearning/pandas/">pandas</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">docker</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../docker/docker-images-featured.md">镜像试用</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../docker/docker-registry.md">镜像私服</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../docker/docker.md">日常使用</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../docker/docker-compose.md">composer</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../docker/portainer.md">portainer</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">ESXi</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../esxi/esxi-admin-guide/">管理员指南</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../esxi/esxi-ubuntu1804">ubuntu18.04</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">G7-7588</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../G7-7588/G7-7588/">系统信息</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">G7-Windows10</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../G7-7588/Windows10/ADeveloper/">开发环境</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../G7-7588/Windows10/Win10-install/">安装系统</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../G7-7588/Windows10/Win10-note/">备忘</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../G7-7588/Windows10/Win10-reset/">重装系统</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../G7-7588/Windows10/win10-user-guide/">用户指南</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">G7-Ubuntu</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../G7-7588/Ubuntu-16.04/Ubuntu安装记录.md">Ubuntu安装记录</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../G7-7588/Ubuntu-16.04/Ubuntu使用指南/">Ubuntu使用指南</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../G7-7588/Ubuntu-16.04/nvidia-cuda安装与使用/">nvidia-cuda安装与使用</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">代理与内网穿透</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../proxy/frp/frp-domain/">frp域名</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../proxy/frp/frp-install/">frp安装</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../proxy/nps/">nps</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../proxy/Proxfier/">Proxfier</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../proxy/ProxySwitchyOmega/">ProxySwitchyOmega</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Python积累</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../python/jupyter/">jupyter</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../python/conda/">conda</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../python/envs-conda/">envs-conda</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">synology-ds215j</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../dsm-guide/">DSM Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../ds215j/ds215j-guide/">ds215j-guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../app-chevereto/">套件chevereto</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">synology-ds3617xs</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../ds3617xs-docker/">docker</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../ds3617xs-guide/">指南</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">安装</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#ds3617xs">DS3617xs管理指南</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#esxi">在ESXi环境下安装</a></li>
+        
+            <li><a class="toctree-l4" href="#_1">日常使用</a></li>
+        
+            <li><a class="toctree-l4" href="#_2">安装套件</a></li>
+        
+            <li><a class="toctree-l4" href="#tips">Tips</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">工具箱</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../toolset/BeyondCompare/">BeyondCompare</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../toolset/chrome/">chrome</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../toolset/clonezilla/">clonezilla</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../toolset/mkdocs/">Firefox</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../toolset/mkdocs/">mkdocs</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Ubuntu基础</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../Ubuntu/grub2.md">grub2</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../Ubuntu/nfs-server.md">nfs部署</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">退步集</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>synology-ds3617xs &raquo;</li>
+        
+      
+    
+    <li>安装</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/huhongjun/mydocu/edit/master/docs/synology/ds3617xs/ds3617xs-install.md"> Edit on GitHub: 日常文档</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="ds3617xs">DS3617xs管理指南</h1>
+<h2 id="esxi">在ESXi环境下安装</h2>
+<p>ESXi新建虚拟机，要点：
+    - StarWind Converter将启动硬盘synboot.vmdk转换为ESXi主机格式
+    - 加入现有硬盘，即下载的引导硬盘，sata 0:0
+    - 引导修改boot优先级，启动后选择菜单第三项（是特别针对esxi）
+    - find.synology.com 或 Synology Assistant搜索设备
+    - 安装DSM_DS3617xs_23739.pat(Synology Assistant有显示23739)</p>
+<h2 id="_1">日常使用</h2>
+<p>Synology容器
+    可以非常方便的进入终端，终端内类似XTerm，可以ping 主机局域网
+    新开终端，执行命令：sh，/bin/bash</p>
+<p>MariaDB
+    DS215j的数据库服务器remote账号特为远程登录
+    D:\ARun\Navicat 用remote账号可以访问</p>
+<h2 id="_2">安装套件</h2>
+<p>手动下载套件地址如下
+<a href="https://cndl.synology.cn/download/Package/spk/Node.js_v8/8.9.4-0005/Node.js_v8-x86_64-8.9.4-0005.spk">NodeJS</a>
+https://cndl.synology.cn/download/Package/spk/SynologyDrive/1.1.4-10580/SynologyDrive-x86_64-1.1.4-10580.spk
+https://global.download.synology.com/download/Package/spk/SynologyMoments/1.2.1-0646/SynologyMoments-x86_64-1.2.1-0646.spk</p>
+<p>https://cndl.synology.cn/download/Package/spk/Docker/18.09.0-0506/Docker-x64-18.09.0-0506.spk
+https://cndl.synology.cn/download/Package/spk/Office/3.1.5-2772/Office-x86_64-3.1.5-2772.spk</p>
+<p>https://cndl.synology.cn/download/Package/spk/DocumentViewer/1.2.5-0100/DocumentViewer-AllinOne-x86_64-1.2.5-0100.spk
+https://global.download.synology.com/download/Package/spk/StorageAnalyzer/2.0.1-0199/StorageAnalyzer-x86_64-2.0.1-0199.spk
+https://cndl.synology.cn/download/Package/spk/PHP7.2/7.2.20-0004/PHP7.2-x86_64-7.2.20-0004.spk</p>
+<h3 id="active-backup-business">Active Backup Business</h3>
+<h4 id="_3">激活</h4>
+<p>http://192.168.1.172:5000/webapi/auth.cgi?api=SYNO.API.Auth&amp;method=Login&amp;version=1&amp;account=admin&amp;passwd=huhj2019
+http://192.168.1.172:5000/webapi/entry.cgi?api=SYNO.ActiveBackup.Activation&amp;method=set&amp;version=1&amp;activated=true&amp;serial_number="A8ODN02468"
+http://192.168.1.172:5000/webapi/entry.cgi?api=SYNO.ActiveBackupGSuite&amp;method=set_activation&amp;version=1&amp;serial_number="A8ODN02468"</p>
+<p>http://ds3617xs-vm:5000/webapi/auth.cgi?api=SYNO.API.Auth&amp;method=Login&amp;version=1&amp;account=admin&amp;passwd=huhj2019
+http://ds3617xs-vm:5000/webapi/entry.cgi?api=SYNO.ActiveBackup.Activation&amp;method=set&amp;version=1&amp;activated=true&amp;serial_number="A8ODN02468"
+http://ds3617xs-vm:5000/webapi/entry.cgi?api=SYNO.ActiveBackupGSuite&amp;method=set_activation&amp;version=1&amp;serial_number="A8ODN02468"</p>
+<h2 id="tips">Tips</h2>
+<p>esxi和vmware workstation采用不同的硬盘格式。
+可用StarWind Converter转换硬盘格式。</p>
+<p>如何为虚拟机手动启用 CBT
+启用 VMware 更改块跟踪 (CBT) 以便仅备份自上次备份时间以来更改的块，大幅减少传输的数据大小和备份时间。</p>
+<p>本文章将会引导您完成在 VMware vSphere 中手动启用 CBT 的流程。请按照 VMware 说明进行操作并执行以下步骤。</p>
+<p>若要在虚拟机中启用 CBT：
+关闭虚拟机。如果不关闭虚拟机电源，您将无法成功完成设置。
+右键单击虚拟机，然后单击编辑设置。
+单击虚拟机选项选项卡。
+单击高级，然后单击配置参数旁的编辑配置。即会打开“配置参数”对话框。
+单击添加参数，添加 ctkEnabled 参数，并将其值设置为 true。
+单击添加参数，添加 scsi0:0.ctkEnabled，并将其值设置为 true。
+注：
+每当将硬盘添加到虚拟机时，都会分配给硬盘一个 SCSI 设备。scsi0:0.ctkEnabled 中的 scsi0:0 代表 SCSI 设备，而其他设备的显示类似于 scsi0:1 或 scsi 1:1。
+可以对每个硬盘分别启用或禁用 CBT。
+开启虚拟机。
+在虚拟机的主目录中，验证每个已启用 CBT 的硬盘中是否有 vmname-ctk.vmdk 文件。
+以上说明参考此网站：VMware KB 1031873。在 VMware vSphere 的不同版本中可能会有所变化。您可以在 VMware KB 1031873 找到有关在 VMware 虚拟机中启用 CBT 的更多最新详细信息。</p>
+<p>启用 CBT 之后，第一个备份仍会是完整备份，后续备份会是增量备份。</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../../toolset/BeyondCompare/" class="btn btn-neutral float-right" title="BeyondCompare">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../ds3617xs-guide/" class="btn btn-neutral" title="指南"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../ds3617xs-guide/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../../toolset/BeyondCompare/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../js/extra.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>

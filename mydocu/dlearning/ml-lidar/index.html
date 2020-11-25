@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Pastoral">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>激光点云分类 - 退步集</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u6fc0\u5149\u70b9\u4e91\u5206\u7c7b";
+    var mkdocs_page_input_path = "dlearning/ml-lidar.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> 退步集</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">aws使用记录</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../aws/aws-ec2.md">aws-ec2</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../aws/aws-install.md">安装</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../aws/aws-s3/">S3</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../aws/aws-vpn.md">vpn</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../aws/awscli/">awscli</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">开发主题</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../dev/chrome-extension/">Chrome扩展</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/redmine/">Redmine</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">vscode</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../dev/vscode/vscode/">使用入门</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/vscode/vscode-extension/">扩展开发</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/vscode/remote-fs/">remote-fs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/vscode/remote-browser/">remote-browser</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/vscode/bash-debug/">bash-debug</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">devops入门</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../devops/ansible/ansible/">ansible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../devops/nginx/nginx/">nginx</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../devops/vscode/vscode.md">vscode</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../devops/weka/weka/">weka</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../devops/github/">github</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../devops/maven/">maven</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../devops/nexus/">nexus</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">深度学习修炼</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">激光点云分类</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#3d">3D 激光点云分类研究</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#_1">一、项目说明</a></li>
+        
+            <li><a class="toctree-l4" href="#_2">二、开发记录</a></li>
+        
+            <li><a class="toctree-l4" href="#_3">三、附录</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../pandas/">pandas</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">docker</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../docker/docker-images-featured.md">镜像试用</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../docker/docker-registry.md">镜像私服</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../docker/docker.md">日常使用</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../docker/docker-compose.md">composer</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../docker/portainer.md">portainer</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">ESXi</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../esxi/esxi-admin-guide/">管理员指南</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../esxi/esxi-ubuntu1804">ubuntu18.04</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">G7-7588</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../G7-7588/G7-7588/">系统信息</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">G7-Windows10</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../G7-7588/Windows10/ADeveloper/">开发环境</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../G7-7588/Windows10/Win10-install/">安装系统</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../G7-7588/Windows10/Win10-note/">备忘</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../G7-7588/Windows10/Win10-reset/">重装系统</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../G7-7588/Windows10/win10-user-guide/">用户指南</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">G7-Ubuntu</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../G7-7588/Ubuntu-16.04/Ubuntu安装记录.md">Ubuntu安装记录</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../G7-7588/Ubuntu-16.04/Ubuntu使用指南/">Ubuntu使用指南</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../G7-7588/Ubuntu-16.04/nvidia-cuda安装与使用/">nvidia-cuda安装与使用</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">代理与内网穿透</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../proxy/frp/frp-domain/">frp域名</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../proxy/frp/frp-install/">frp安装</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../proxy/nps/">nps</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../proxy/Proxfier/">Proxfier</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../proxy/ProxySwitchyOmega/">ProxySwitchyOmega</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Python积累</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../python/jupyter/">jupyter</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../python/conda/">conda</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../python/envs-conda/">envs-conda</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">synology-ds215j</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../synology/dsm-guide/">DSM Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../synology/ds215j/ds215j-guide/">ds215j-guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../synology/app-chevereto/">套件chevereto</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">synology-ds3617xs</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../synology/ds3617xs/ds3617xs-docker/">docker</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../synology/ds3617xs/ds3617xs-guide/">指南</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../synology/ds3617xs/ds3617xs-install/">安装</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">工具箱</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../toolset/BeyondCompare/">BeyondCompare</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../toolset/chrome/">chrome</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../toolset/clonezilla/">clonezilla</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../toolset/mkdocs/">Firefox</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../toolset/mkdocs/">mkdocs</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Ubuntu基础</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Ubuntu/grub2.md">grub2</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Ubuntu/nfs-server.md">nfs部署</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">退步集</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>深度学习修炼 &raquo;</li>
+        
+      
+    
+    <li>激光点云分类</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/huhongjun/mydocu/edit/master/docs/dlearning/ml-lidar.md"> Edit on GitHub: 日常文档</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="3d">3D 激光点云分类研究</h1>
+<h2 id="_1">一、项目说明</h2>
+<ol>
+<li>inbox</li>
+</ol>
+<p>2019.04.13 新加入：alsNet、3d-semantic-segmentation、Tree-seg</p>
+<ol>
+<li>3DmFV-Net  </li>
+</ol>
+<p>基于卷积神经网络的三维点云实时对象分类
+python2.7+TF1.2.1+CUDA8.0.61+cuDNN5105+Ubuntu16.04，严格按作者提供的环境能跑起来，但没有GPU加速，FV（Fisher Vectors）+pointnet，对pointnet基于FV的增强，数据集modelnet40_ply_hdf5_2048，代码使用pointnet作为模板，但在CNN模型和点云表示上有实质上、重要的修改。</p>
+<ol>
+<li>ChrisLucas  </li>
+</ol>
+<p>python，博士论文，提取植被边界线条</p>
+<ol>
+<li>
+<p>DoF-Enhancement-PointNet-model<br />
+    python，pointnet修正版，新版tf下跑了5epoch</p>
+</li>
+<li>
+<p>lidar-buster github作者收集的lidar处理代码，notebook</p>
+</li>
+<li>
+<p>MachineLearning-vs-LiDAR<br />
+    python，xgboost，调通，机载LiDAR数据
+    使用LAS格式文件中能提供的特征，手动提取的特征并不多
+    刚开始时重点研究项目，够简单直接，尝试用于宇邦点云分类</p>
+</li>
+<li>
+<p>Open3D-Pointnet2-Semantic3D<br />
+    IntelVCL做得pointnet2的移植版本，利用VCL做点云数据转换与显示，用Semantic3D数据集做予以分割。</p>
+</li>
+<li>
+<p>PointCNN<br />
+    山东大学，点云分类、分割准确率高于pointnet</p>
+</li>
+<li>
+<p>pointnet<br />
+    有论文、ppt和youtube上的讲座（将门创投）</p>
+</li>
+<li>
+<p>pointnet-keras-garyli<br />
+    pointnet的一个keras实现，做了cls和seg，可能因为用了keras，能用到较高版本的tensorflow</p>
+</li>
+<li>
+<p>pointnet-keras-Tianzhongsong<br />
+    pointnet的一个keras实现，只有cls</p>
+</li>
+<li>
+<p>pointnet2</p>
+</li>
+<li>
+<p>pointnet2-colab<br />
+    在Google colab上运行pointnet2，实操未成功tensorflow找不到libcublas8.so</p>
+</li>
+<li>
+<p>PointnetEnhanced</p>
+<ul>
+<li>实操3DmFV-Net、pointnet、pointnet2并出报告pdf；</li>
+<li>pointnet实现了宏参数调试hyperopt；</li>
+<li>ipynb在Google colab上运行，代码存放在Google Drive，可直接运行，Google和虚拟机可互相拷贝文件</li>
+<li>本地也可运行</li>
+</ul>
+</li>
+<li>
+<p>RoadMArkingExtraction<br />
+    武汉大学，C++，路面标志提取，有exe程序</p>
+</li>
+<li>
+<p>roofn3d<br />
+    python，点云深度学习屋顶分类、分割，破损屋顶点云重建；
+    pointnet用于分类和分割，类别（Saddleback Roof, Pyramid Roof, and Two-Sided Hip Roof）
+    单独的破损修复网络，有论文</p>
+</li>
+<li>
+<p>SGPN<br />
+    点云实例分割  </p>
+</li>
+<li>
+<p>Udacity-SDCNDP-Traffic-Sign-Classification</p>
+<p>交通信号识别分类器；
+LeNet，深度学习，ipynb</p>
+</li>
+<li>
+<p>Urban-point-cloud-classification<br />
+    作者还想用pointnet做分类（tensorflow版和keras版都开动了），不过实验未完成
+    调通去掉地面和默认点随机森林版本，不去除的版本计算时太慢没走通</p>
+<ul>
+<li>Uban point cloud Classifier.ipynb<ol>
+<li>python，sklearn,随机森林，点云分类，ipynb，17个类别； </li>
+<li>预处理：基于网格的抽稀，</li>
+<li>用pyntcloud提取了各种各样的特征9个； </li>
+<li>使用的数据集： Paris-rue-Madame database，巴黎一个街区</li>
+<li>训练集和测试集都是1千万个点，排除地面点和默认点，剩下90万个点</li>
+<li>2019.03.14 调通，测试集 Accuracy: 0.9174709432905417，精确度92%，作者说如果多用计算资源如果提取一些计算复杂的特征，可能还能改善。</li>
+</ol>
+</li>
+<li>point cloud Classifier.ipynb<ol>
+<li>不去除地面和默认点的版本</li>
+<li></li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="_2">二、开发记录</h2>
+<h3 id="pointnet">PointNet</h3>
+<pre><code>样本数据为手动下载解压放入data目录
+单次训练时长大致为 3.5 小时。
+python源码中涉及linux脚本cp,rm,mv,wget
+</code></pre>
+<h3 id="pointnet2">PointNet2</h3>
+<pre><code>2018年5月29日：尝试按照自述文档中的用法一节，训练样本数据的 ModelNet40，并记录了日志（点击下载日志压缩包）。本次训练按照自述文档的建议，使用两个显卡同时训练。单次训练时长大约 2 小时 20 分。样本数据分两部分，即 ModelNet40 和 ShapeNetCore。其中 ShapeNetCore 初次输入太大，实验室并不具备运行条件，遂没有尝试。日志查看方法：上述提到的日志压缩包均为训练全部过程的记录。查看前将其解压到某个位置，然后使用 Tensorboard 指定日志目录并运行即可。
+</code></pre>
+<h2 id="_3">三、附录</h2>
+<p>点云分类
+部分分割
+语义分割</p>
+<p>国内研究比较充分的是点云的第五分类，面向野外、城市；</p>
+<p>TLS - 地面激光扫描
+ALS - 航空激光扫描（直升机、无人机），一般比较稀疏，有空间缺失</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../pandas/" class="btn btn-neutral float-right" title="pandas">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../devops/nexus/" class="btn btn-neutral" title="nexus"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../devops/nexus/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../pandas/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../js/extra.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

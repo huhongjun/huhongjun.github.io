@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Pastoral">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>conda - 退步集</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "conda";
+    var mkdocs_page_input_path = "python/conda.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> 退步集</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">aws使用记录</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../aws/aws-ec2.md">aws-ec2</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../aws/aws-install.md">安装</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../aws/aws-s3/">S3</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../aws/aws-vpn.md">vpn</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../aws/awscli/">awscli</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">开发主题</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../dev/chrome-extension/">Chrome扩展</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/redmine/">Redmine</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">vscode</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../dev/vscode/vscode/">使用入门</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/vscode/vscode-extension/">扩展开发</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/vscode/remote-fs/">remote-fs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/vscode/remote-browser/">remote-browser</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/vscode/bash-debug/">bash-debug</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">devops入门</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../devops/ansible/ansible/">ansible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../devops/nginx/nginx/">nginx</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../devops/vscode/vscode.md">vscode</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../devops/weka/weka/">weka</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../devops/github/">github</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../devops/maven/">maven</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../devops/nexus/">nexus</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">深度学习修炼</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../dlearning/ml-lidar/">激光点云分类</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dlearning/pandas/">pandas</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">docker</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../docker/docker-images-featured.md">镜像试用</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../docker/docker-registry.md">镜像私服</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../docker/docker.md">日常使用</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../docker/docker-compose.md">composer</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../docker/portainer.md">portainer</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">ESXi</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../esxi/esxi-admin-guide/">管理员指南</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../esxi/esxi-ubuntu1804">ubuntu18.04</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">G7-7588</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../G7-7588/G7-7588/">系统信息</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">G7-Windows10</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../G7-7588/Windows10/ADeveloper/">开发环境</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../G7-7588/Windows10/Win10-install/">安装系统</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../G7-7588/Windows10/Win10-note/">备忘</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../G7-7588/Windows10/Win10-reset/">重装系统</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../G7-7588/Windows10/win10-user-guide/">用户指南</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">G7-Ubuntu</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../G7-7588/Ubuntu-16.04/Ubuntu安装记录.md">Ubuntu安装记录</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../G7-7588/Ubuntu-16.04/Ubuntu使用指南/">Ubuntu使用指南</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../G7-7588/Ubuntu-16.04/nvidia-cuda安装与使用/">nvidia-cuda安装与使用</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">代理与内网穿透</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../proxy/frp/frp-domain/">frp域名</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../proxy/frp/frp-install/">frp安装</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../proxy/nps/">nps</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../proxy/Proxfier/">Proxfier</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../proxy/ProxySwitchyOmega/">ProxySwitchyOmega</a>
+                </li>
+    </ul>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Python积累</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../jupyter/">jupyter</a>
+                </li>
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="./">conda</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#anaconda">anaconda</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#conda">升级conda</a></li>
+        
+            <li><a class="toctree-l5" href="#windows">Windows</a></li>
+        
+            <li><a class="toctree-l5" href="#proxy">proxy</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../envs-conda/">envs-conda</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">synology-ds215j</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../synology/dsm-guide/">DSM Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../synology/ds215j/ds215j-guide/">ds215j-guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../synology/app-chevereto/">套件chevereto</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">synology-ds3617xs</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../synology/ds3617xs/ds3617xs-docker/">docker</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../synology/ds3617xs/ds3617xs-guide/">指南</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../synology/ds3617xs/ds3617xs-install/">安装</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">工具箱</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../toolset/BeyondCompare/">BeyondCompare</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../toolset/chrome/">chrome</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../toolset/clonezilla/">clonezilla</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../toolset/mkdocs/">Firefox</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../toolset/mkdocs/">mkdocs</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Ubuntu基础</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Ubuntu/grub2.md">grub2</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Ubuntu/nfs-server.md">nfs部署</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">退步集</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Python积累 &raquo;</li>
+        
+      
+        
+          <li>G7-Ubuntu &raquo;</li>
+        
+      
+    
+    <li>conda</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/huhongjun/mydocu/edit/master/docs/python/conda.md"> Edit on GitHub: 日常文档</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="anaconda">anaconda</h1>
+<h2 id="conda">升级conda</h2>
+<p>conda info
+conda update conda</p>
+<p>Please update conda by running:</p>
+<pre><code>conda update -n base -c defaults conda
+</code></pre>
+<h2 id="windows">Windows</h2>
+<h3 id="_1">使用</h3>
+<pre><code>export PATH="/home/huhongjun/anaconda3/bin:$PATH"
+export PATH="/home/huhongjun/anaconda2/bin:$PATH"
+d:\miniconda3\Scripts\activate 或 d:\ADeveloper\DevCMD.bat
+</code></pre>
+<h3 id="_2">配置镜像源</h3>
+<p>清华</p>
+<pre><code>conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+conda config --set show_channel_urls yes
+</code></pre>
+<p>中科大</p>
+<pre><code>conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/main/
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/
+conda config --set show_channel_urls yes
+</code></pre>
+<p>上海交大</p>
+<p>channels:</p>
+<pre><code>https://mirrors.sjtug.sjtu.edu.cn/anaconda/pkgs/main/
+https://mirrors.sjtug.sjtu.edu.cn/anaconda/pkgs/free/
+https://mirrors.sjtug.sjtu.edu.cn/anaconda/cloud/conda-forge/
+</code></pre>
+<p>ssl_verify: true</p>
+<p>删源换回默认
+conda config --remove-key channels</p>
+<pre><code>pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pandas
+
+Linux   ~/.pip/pip.conf
+windows C:\Users\xxxx\pip\pip.ini
+
+[global]
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+</code></pre>
+<h3 id="_3">虚拟环境管理</h3>
+<p>conda remove -n py27 --all 移除虚拟环境</p>
+<h3 id="tips">Tips</h3>
+<p>conda安装tensorflow-gpu一并安装cuda，pip不会===》1.11配9.20,1.13==10.0 </p>
+<pre><code>====tfgpu=====================================================
+source activate ~/anaconda2/bin/activate
+conda create -n tfgpu-1.10 python=3.6
+conda activate tfgpu-1.10
+pip install tensorflow-gpu==1.10
+
+conda env list  列出虚拟环境
+conda list      列出安装的包
+
+conda install ipykernel
+python -m ipykernel install --user --name urban --display-name "Python3.7(Urban)"
+
+d:\miniconda3\Scripts\activate 或 d:\ADeveloper\DevCMD.bat
+</code></pre>
+<h2 id="proxy">proxy</h2>
+<p>.condarc
+proxy_servers:
+    http: http://127.0.0.1:8580</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../envs-conda/" class="btn btn-neutral float-right" title="envs-conda">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../jupyter/" class="btn btn-neutral" title="jupyter"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../jupyter/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../envs-conda/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../js/extra.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

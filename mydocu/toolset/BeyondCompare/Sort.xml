@@ -1,0 +1,18 @@
+<bc_settings>
+  <rules>
+    <list name="Sorted">
+      <str_val name="RulesClass" value="TFreeForm1Rules"/>
+      <str_val name="FileTypes" value=""/>
+      <str_val name="Version" value="###"/>
+      <int_val name="Tab" value="8"/>
+      <int_val name="Speed" value="5"/>
+      <int_val name="CodePage" value="0"/>
+      <int_val name="Case" value="1"/>
+      <int_val name="Convert" value="3"/>
+      <str_val name="InCvtCmd" value="sort %s /output %t"/>
+      <int_val name="CvtRO" value="1"/>
+      <str_val name="WS" value="-"/>
+      <list name="Classify"/>
+    </list>
+  </rules>
+</bc_settings>

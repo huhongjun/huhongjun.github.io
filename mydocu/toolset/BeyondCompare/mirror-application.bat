@@ -1,0 +1,1 @@
+".\Beyond Compare 2\bc2.exe" @bc-script.txt

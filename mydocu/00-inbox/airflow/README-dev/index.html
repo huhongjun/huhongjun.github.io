@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Pastoral">
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>airflow - 退步集</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "airflow";
+    var mkdocs_page_input_path = "00-inbox/airflow/README-dev.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> 退步集</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">aws使用记录</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../aws/aws-ec2.md">aws-ec2</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../aws/aws-install.md">安装</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../aws/aws-s3/">S3</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../aws/aws-vpn.md">vpn</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../aws/awscli/">awscli</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">开发主题</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../dev/chrome-extension/">Chrome扩展</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../dev/redmine/">Redmine</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">vscode</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../dev/vscode/vscode/">使用入门</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../dev/vscode/vscode-extension/">扩展开发</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../dev/vscode/remote-fs/">remote-fs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../dev/vscode/remote-browser/">remote-browser</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../dev/vscode/bash-debug/">bash-debug</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">devops入门</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../devops/ansible/ansible/">ansible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../devops/nginx/nginx/">nginx</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../devops/vscode/vscode.md">vscode</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../devops/weka/weka/">weka</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../devops/github/">github</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../devops/maven/">maven</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../devops/nexus/">nexus</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">深度学习修炼</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../dlearning/ml-lidar/">激光点云分类</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../dlearning/pandas/">pandas</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">docker</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../docker/docker-images-featured.md">镜像试用</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../docker/docker-registry.md">镜像私服</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../docker/docker.md">日常使用</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../docker/docker-compose.md">composer</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../docker/portainer.md">portainer</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">ESXi</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../esxi/esxi-admin-guide/">管理员指南</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../esxi/esxi-ubuntu1804">ubuntu18.04</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">G7-7588</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../G7-7588/G7-7588/">系统信息</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">G7-Windows10</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../G7-7588/Windows10/ADeveloper/">开发环境</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../G7-7588/Windows10/Win10-install/">安装系统</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../G7-7588/Windows10/Win10-note/">备忘</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../G7-7588/Windows10/Win10-reset/">重装系统</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../G7-7588/Windows10/win10-user-guide/">用户指南</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">G7-Ubuntu</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../G7-7588/Ubuntu-16.04/Ubuntu安装记录.md">Ubuntu安装记录</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../G7-7588/Ubuntu-16.04/Ubuntu使用指南/">Ubuntu使用指南</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../G7-7588/Ubuntu-16.04/nvidia-cuda安装与使用/">nvidia-cuda安装与使用</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">代理与内网穿透</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../proxy/frp/frp-domain/">frp域名</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../proxy/frp/frp-install/">frp安装</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../proxy/nps/">nps</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../proxy/Proxfier/">Proxfier</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../proxy/ProxySwitchyOmega/">ProxySwitchyOmega</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Python积累</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../python/jupyter/">jupyter</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../python/conda/">conda</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../python/envs-conda/">envs-conda</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">synology-ds215j</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../synology/dsm-guide/">DSM Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../synology/ds215j/ds215j-guide/">ds215j-guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../synology/app-chevereto/">套件chevereto</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">synology-ds3617xs</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../synology/ds3617xs/ds3617xs-docker/">docker</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../synology/ds3617xs/ds3617xs-guide/">指南</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../synology/ds3617xs/ds3617xs-install/">安装</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">工具箱</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../toolset/BeyondCompare/">BeyondCompare</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../toolset/chrome/">chrome</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../toolset/clonezilla/">clonezilla</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../toolset/mkdocs/">Firefox</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../toolset/mkdocs/">mkdocs</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Ubuntu基础</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../Ubuntu/grub2.md">grub2</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../Ubuntu/nfs-server.md">nfs部署</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">退步集</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>airflow</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/huhongjun/mydocu/edit/master/docs/00-inbox/airflow/README-dev.md"> Edit on GitHub: 日常文档</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="airflow">airflow</h1>
+<h2 id="_1">简介</h2>
+<h3 id="_2">基本信息</h3>
+<p>开源,任务调度UI监控平台
+分布式 =&gt; 允许一个工作流的task在多台worker上同时执行
+DAG + 流程化 =&gt;将一个具有上下级依赖关系的工作流，组装成一个有向无环图。
+Python,data pipeline</p>
+<p>用户接口: 命令行界面 + WebUI</p>
+<p>提供了丰富的命令行工具用于系统管控，而其web管理界面同样也可以方便的管控调度任务，并且对任务运行状态进行实时监控，方便了系统的
+而其web管理界面同样也可以方便的管控调度任务，并且对任务运行状态进行实时监控，方便了系统的运维和管理。</p>
+<h3 id="_3">基本概念</h3>
+<p>task =&gt; 工作流上每个task都是原子可重试的，一个工作流某个环节的task失败可自动或手动进行重试，不必从头开始任务
+Task Instance   当一个 Task 被调度启动时，就会产生一个 Task Instance。可以理解为由 Task 实例化的实例。
+dag  =&gt; 一个dag表示一个定时的工作流，包含一个或者多个具有依赖关系的task
+DAG Run 当一个 DAG 满足它的调度时间，或者被外部触发时，就会产生一个 DAG Run。可以理解为由 DAG 实例化的实例。</p>
+<p>operator
+hook</p>
+<h3 id="_4">历史</h3>
+<p>2014年启动
+2015年春季开源
+2016年加入 Apache 软件基金会的孵化计划。</p>
+<p>Airflow 设计时，只是为了很好的处理 ETL 任务而已，但是其精良的设计，正好可以用来解决任务的各种依赖问题</p>
+<h3 id="_5">能做什么</h3>
+<p>允许工作流开发人员轻松创建、维护和周期性地调度运行工作流（即有向无环图或成为 DAGs ）的工具。</p>
+<p>接口 这个平台拥有和 Hive、Presto、MySQL、HDFS、Postgres 和 S3 交互的能力，并且提供了钩子使得系统拥有很好地扩展性。除了一个命令行界面，该工具还提供了一个基于 Web 的用户界面让您可以可视化管道的依赖关系、监控进度、触发任务等。</p>
+<h3 id="_6">应用场景</h3>
+<p>airbnb  这些工作流包括了如数据存储、增长分析、Email 发送、A/B 测试等等这些跨越多部门的用例。</p>
+<h3 id="_7">类似软件</h3>
+<p>Azkaban、oozie</p>
+<h3 id="_8">优势</h3>
+<p>业务代码和调度系统解耦，每个业务的流程代码以独立的Python脚本描述，里面定义了流程化的节点来执行业务逻辑，支持任务的热加载。
+完全支持crontab定时任务格式，可以通过crontab格式指定任务何时进行。
+支持复杂的分支条件，每个节点单独设定触发时机，如父节点全部成功时执行、任意父节点成功时执行。
+有一套完整的UI，可视化展现所有任务的状态及历史信息。
+外部依赖较少，搭建容易，仅依赖DB和rabbitmq。</p>
+<h2 id="_9">开发</h2>
+<h3 id="_10">组件</h3>
+<p>在一个可扩展的生产环境中，Airflow 含有以下组件：</p>
+<pre><code>一个元数据库（MySQL 或 Postgres）
+一组 Airflow 工作节点
+一个调节器（Redis 或 RabbitMQ）
+一个 Airflow Web 服务器
+</code></pre>
+<p>所有这些组件可以在一个机器上随意扩展运行。如果使用 LocalExcuter 来适度的安装则可以获得相当多的额外性能。</p>
+<h3 id="_11">守护进程</h3>
+<p>webserver : 提供web端服务，以及会定时生成子进程去扫描对应的目录下的dags，并更新数据库
+scheduler : 任务调度服务，根据dags生成任务，并提交到消息中间件队列中 (redis或rabbitMq)
+整个 Airflow 的调度由 Scheduler 负责发起，每隔一段时间 Scheduler 就会检查所有定义完成的 DAG 和定义在其中的作业，如果有符合运行条件的作业，Scheduler 就会发起相应的作业任务以供 Worker 接收。</p>
+<p>celery worker : 分布在不同的机器上，作为任务真正的的执行节点。通过监听消息中间件: redis或rabbitMq 领取任务
+flower : 监控worker进程的存活性，启动或关闭worker进程，查看运行的task
+Flower 提供了一个可视化界面以监控所有 Celery Worker 的运行状况。这个服务并不是必要的。
+webserver 是一个守护进程，它接受 HTTP 请求，允许你通过 Python Flask Web 应用程序与 airflow 进行交互，
+Airflow 提供了一个可视化的 Web 界面。启动 WebServer 后，就可以在 Web 界面上查看定义好的 DAG 并监控及改变运行状况。也可以在 Web 界面中对一些变量进行配置。
+webserver 提供以下功能：</p>
+<ul>
+<li>中止、恢复、触发任务。</li>
+<li>监控正在运行的任务，断点续跑任务。</li>
+<li>执行 ad-hoc 命令或 SQL 语句来查询任务的状态，日志等详细信息。</li>
+<li>配置连接，包括不限于数据库、ssh 的连接等。</li>
+</ul>
+<p>webserver 守护进程使用 gunicorn 服务器（相当于 java 中的 tomcat ）处理并发请求，可通过修改{AIRFLOW_HOME}/airflow.cfg文件中 workers 的值来控制处理并发请求的进程数。</p>
+<p>worker 是一个守护进程，它启动 1 个或多个 Celery 的任务队列，负责执行具体 的 DAG 任务。
+一般来说我们用 Celery Worker 来执行具体的作业。Worker 可以部署在多台机器上，并可以分别设置接收的队列。当接收的队列中有作业任务时，Worker 就会接收这个作业任务，并开始执行。Airflow 会自动在每个部署 Worker 的机器上同时部署一个 Serve Logs 服务，这样我们就可以在 Web 界面上方便的浏览分散在不同机器上的作业日志了。</p>
+<p>当设置 airflow 的 executors 设置为 CeleryExecutor 时才需要开启 worker 守护进程。</p>
+<p>推荐你在生产环境使用 CeleryExecutor ：</p>
+<p>executor = CeleryExecutor</p>
+<p>启动一个 worker守护进程，默认的队列名为 default:</p>
+<p>$ airflow worker -D</p>
+<p>flower 是一个守护进程，用于是监控 celery 消息队列。启动守护进程命令如下：</p>
+<p>$ airflow flower -D</p>
+<p>默认的端口为 5555，您可以在浏览器地址栏中输入 "http://hostip:5555" 来访问 flower ，对 celery 消息队列进行监控。</p>
+<h4 id="executor">执行器(Executor)</h4>
+<p>Airflow本身是一个综合平台，它兼容多种组件，所以在使用的时候有多种方案可以选择。比如最关键的执行器就有四种选择:</p>
+<p>SequentialExecutor：单进程顺序执行任务，默认执行器，通常只用于测试
+LocalExecutor：多进程本地执行任务
+CeleryExecutor：分布式调度，生产常用
+DaskExecutor ：动态任务调度，主要用于数据分析
+生产环境建议使用CeleryExecutor作为执行器。</p>
+<p>celery是一个分布式调度框架，其本身无队列功能，需要使用第三方组件，比如redis或者rabbitmq。</p>
+<h3 id="_12">运行过程</h3>
+<p>run命令运行过程 - 读取dag文件生成task依赖关系，然后生成封装airflow run的command命令，通过celery发送到executor端，重新执行该airflow run命令</p>
+<p>scheduler命令运行过程：
+调度器通过SchedulerJob类run方法执行整个流程，包括使用多进程处理DagDir，包括生成Dag，产生DagRun，每个DagRun下又生成多个TaskInstance，然后将任务通过Executor分发到执行节点运行。涉及到的方法有：SchedulerJob类create_dag_run创建DagRun，DagRun类verify_integrity生成TaskInstance，任务封装为command命令后发送到执行节点，执行节点通过airflow run命令执行该command，此时Job类型为LocalTaskJob</p>
+<h3 id="_13">优点</h3>
+<p>python 脚本实现 DAG ，非常容易扩展
+工作流依赖可视化
+no XML
+可测试
+可作为 crontab 的替代
+可实现复杂的依赖规则
+Pools
+CLI 和 Web UI</p>
+<h2 id="airflow-plugins">airflow plugins 定制化开发</h2>
+<h2 id="_14">安装</h2>
+<h3 id="_15">直接安装</h3>
+<h4 id="airflow_1">airflow单节点部署</h4>
+<p>将以上所有守护进程运行在同一台机器上即可完成 airflow 的单结点部署，架构如下图所示：</p>
+<h4 id="airflow_2">airflow多节点（集群）部署</h4>
+<p>在稳定性要求较高的场景，如金融交易系统中，一般采用集群、高可用的方式来部署。Apache Airflow 同样支持集群、高可用的部署，airflow 的守护进程可分布在多台机器上运行</p>
+<p>好处:</p>
+<ul>
+<li>
+<ol>
+<li>高可用: 如果一个 worker 节点崩溃或离线时，集群仍可以被控制的，其他 worker 节点的任务仍会被执行。</li>
+</ol>
+</li>
+<li>分布式处理: 如果你的工作流中有一些内存密集型的任务，任务最好是分布在多台机器上运行以便得到更快的执行。</li>
+<li>扩展 worker 节点: 水平扩展</li>
+</ul>
+<p>你可以通过向集群中添加更多 worker 节点来水平地扩展集群，并使这些新节点指向同一个元数据库，从而分发处理过程。由于 worker 不需要在任何守护进程注册即可执行任务，因此worker 节点可以在不停机，不重启服务下的情况进行扩展，也就是说可以随时扩展。</p>
+<p>垂直扩展</p>
+<p>你可以通过增加单个 worker 节点的守护进程数来垂直扩展集群。可以通过修改 airflow 的配置文件-{AIRFLOW_HOME}/airflow.cfg 中 celeryd_concurrency 的值来实现，例如：</p>
+<p>celeryd_concurrency = 30</p>
+<h1 id="cpu">您可以根据实际情况，如集群上运行的任务性质，CPU 的内核数量等，增加并发进程的数量以满足实际需求。</h1>
+<ul>
+<li>扩展 Master 节点
+还可以向集群中添加更多主节点，以扩展主节点上运行的服务。您可以扩展 webserver 守护进程，以防止太多的 HTTP 请求出现在一台机器上，或者您想为 webserver 的服务提供更高的可用性。</li>
+</ul>
+<p>需要注意的一点是，每次只能运行一个 scheduler 守护进程。如果您有多个 scheduler运行，那么就有可能一个任务被执行多次。这可能会导致您的工作流因重复运行而出现一些问题。</p>
+<h4 id="scheduler-failoverha">scheduler failover(HA)</h4>
+<h3 id="docker">基于docker安装</h3>
+<h2 id="_16">使用</h2>
+<h3 id="_17">简介</h3>
+<p>传统 Workflow 通常使用 TextFiles ( json,xml/etc ) 来定义 DAG ,然后 Scheduler 解析这些 DAG 文件形成具体的 TaskObjec t执行； Airflow 没这么干，它直接用 Python 写 DAGdefinition ,一下子突破了文本文件表达能力的局限，定义 DAG 变得简单。</p>
+<h3 id="_18">常见命令</h3>
+<p>airflow initdb，初始化元数据 DB，元数据包括了 DAG 本身的信息、运行信息等；
+resetdb，清空元数据 DB；
+list_dags，列出所有 DAG；
+list_tasks，列出某 DAG 的所有 task ；
+test，测试某 task 的运行状况；
+airflow backfill [dagid] -s[startTime] -e [endTime]，测试某 DAG 在设定的日期区间的运行状况；
+airflow webserver -p 9880   开启 webserver 服务；
+airflow webserver -D        启动 webserver 进程</p>
+<p>scheduler，用于监控与触发 DAG 。</p>
+<p>airflow run dagid [time]    run task instance</p>
+<h2 id="_19">参考资料</h2>
+<h3 id="_20">任务依赖</h3>
+<p>通常，在一个运维系统，数据分析系统，或测试系统等大型系统中，我们会有各种各样的依赖需求。比如：</p>
+<p>时间依赖：任务需要等待某一个时间点触发。
+外部系统依赖：任务依赖 Mysql 中的数据，HDFS 中的数据等等，这些不同的外部系统需要调用接口去访问。
+机器依赖：任务的执行只能在特定的某一台机器的环境中，可能这台机器内存比较大，也可能只有那台机器上有特殊的库文件。
+任务间依赖：任务 A 需要在任务 B 完成后启动，两个任务互相间会产生影响。
+资源依赖：任务消耗资源非常多，使用同一个资源的任务需要被限制，比如跑个数据转换任务要10个 G，机器一共就30个 G，最多只能跑两个，我希望类似的任务排个队。
+权限依赖：某种任务只能由某个权限的用户启动。
+也许大家会觉得这些是在任务程序中的逻辑需要处理的部分，但是我认为，这些逻辑可以抽象为任务控制逻辑的部分，和实际任务执行逻辑解耦合。</p>
+<h3 id="crontab">如何理解 Crontab</h3>
+<p>现在让我们来看下最常用的依赖管理系统，Crontab。</p>
+<p>在各种系统中，总有些定时任务需要处理，每当在这个时候，我们第一个想到的总是crontab。</p>
+<p>确实，crontab 可以很好的处理定时执行任务的需求，但是对于 crontab 来说，执行任务，只是调用一个程序如此简单，而程序中的各种逻辑都不属于 crontab 的管辖范围（很好的遵循了 KISS ）。</p>
+<p>所以我们可以抽象的认为：</p>
+<p>crontab 是一种依赖管理系统，而且只管理时间上的依赖。</p>
+<h2 id="faq">FAQ</h2>
+<p>从1.10.0开始，支持时区的设置，而不是统一的UTC</p>
+<h3 id="_21">核心概念</h3>
+<p>DAGs：即有向无环图(Directed Acyclic Graph)，将所有需要运行的tasks按照依赖关系组织起来，描述的是所有tasks执行顺序。
+Operators：可以简单理解为一个class，描述了DAG中某个的task具体要做的事。其中，airflow内置了很多operators，如BashOperator 执行一个bash 命令，PythonOperator 调用任意的Python 函数，EmailOperator 用于发送邮件，HTTPOperator 用于发送HTTP请求， SqlOperator 用于执行SQL命令等等，同时，用户可以自定义Operator，这给用户提供了极大的便利性。
+Tasks：Task 是 Operator的一个实例，也就是DAGs中的一个node。
+Task Instance：task的一次运行。Web 界面中可以看到task instance 有自己的状态，包括"running", "success", "failed", "skipped", "up for retry"等。
+Task Relationships：DAGs中的不同Tasks之间可以有依赖关系，如 Task1 &gt;&gt; Task2，表明Task2依赖于Task2了。
+通过将DAGs和Operators结合起来，用户就可以创建各种复杂的 工作流（workflow）。</p>
+<h3 id="-operators">操作符-Operators</h3>
+<p>DAG 定义一个作业流，Operators 则定义了实际需要执行的作业。airflow 提供了许多 Operators 来指定我们需要执行的作业：</p>
+<p>BashOperator - 执行 bash 命令或脚本。
+SSHOperator - 执行远程 bash 命令或脚本（原理同 paramiko 模块）。
+PythonOperator - 执行 Python 函数。
+EmailOperator - 发送 Email。
+HTTPOperator - 发送一个 HTTP 请求。
+MySqlOperator, SqliteOperator, PostgresOperator, MsSqlOperator, OracleOperator, JdbcOperator, 等，执行 SQL 任务。
+DockerOperator, HiveOperator, S3FileTransferOperator, PrestoToMysqlOperator, SlackOperator 你懂得。除了以上这些 Operators 还可以方便的自定义 Operators 满足个性化的任务需求。</p>
+<h3 id="airflow_3">airflow 的守护进程是如何一起工作的？</h3>
+<p>需要注意的是 airflow的守护进程彼此之间是独立的，他们并不相互依赖，也不相互感知。每个守护进程在运行时只处理分配到自己身上的任务，他们在一起运行时，提供了 airflow 的全部功能。</p>
+<p>调度器 scheduler 会间隔性的去轮询元数据库（Metastore）已注册的 DAG（有向无环图，可理解为作业流）是否需要被执行。如果一个具体的 DAG 根据其调度计划需要被执行，scheduler 守护进程就会先在元数据库创建一个 DagRun 的实例，并触发 DAG 内部的具体 task（任务，可以这样理解：DAG 包含一个或多个task），触发其实并不是真正的去执行任务，而是推送 task 消息至消息队列（即 broker）中，每一个 task 消息都包含此 task 的 DAG ID，task ID，及具体需要被执行的函数。如果 task 是要执行 bash 脚本，那么 task 消息还会包含 bash 脚本的代码。
+用户可能在 webserver 上来控制 DAG，比如手动触发一个 DAG 去执行。当用户这样做的时候，一个DagRun 的实例将在元数据库被创建，scheduler 使同 #1 一样的方法去触发 DAG 中具体的 task 。
+worker 守护进程将会监听消息队列，如果有消息就从消息队列中取出消息，当取出任务消息时，它会更新元数据中的 DagRun 实例的状态为正在运行，并尝试执行 DAG 中的 task，如果 DAG 执行成功，则更新任 DagRun 实例的状态为成功，否则更新状态为失败。</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../js/extra.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>

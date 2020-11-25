@@ -1,0 +1,5 @@
+# 开启日志功能
+log normal "C:\Application\Synclog.txt"
+
+load ".\AApplication" "H:\Mirror\D\AApplication"
+sync create-empty mirror:lt->rt
