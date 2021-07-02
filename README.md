@@ -20,6 +20,8 @@
 
 ### 项目1、入口导航页
 
+文件:   index.html,scripts.js,styles.css,/assets
+
 编辑scripts.js收录网站；
 
 ### 项目2、docs目录
@@ -27,15 +29,7 @@
 使用_config.yml指定的Jekyll theme发布为网页；
 入口README.md;
 
-### 每个子目录是一个静态网站项目
+### 项目x、每个子目录是一个静态网站项目
 
-其他私有仓库不能发布gh-pages的可以生成静态网页发布到这里；
-可访问的子目录有此处的子目录，也有同组织其他仓库的gh-pages，前缀为仓库名；
-
-## 文件说明
-
-顶层目录部署静态网页；
-
-Jekyll相关文件: README.md,_config.yml;  
-
-上传的静态文件:index.html,scripts.js,styles.css,assets目录;
+其他私有仓库不能发布gh-pages的可以生成静态网页发布到这里（actions）；
+可访问的子目录可以是此处的子目录，也有同组织其他仓库的gh-pages，前缀为仓库名；
