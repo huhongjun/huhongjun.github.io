@@ -15,11 +15,11 @@ const SHORTCUT_TIMEOUT = 1500;
 const MASTER_MAP = [
     {
         "groupName": "open source",
-        "items":
-            {"name": "Source", "shortcutKey": "m", "url": "https://portal.asmatrix.com/docs/", "tooltip": "个人文档站点，日常工作记录与分享。"},
-            {"name": "退步集", "shortcutKey": "m", "url": "https://huhongjun.github.io/mkdocs-mydocu/", "tooltip": "个人文档站点，日常工作记录与分享。"},
-            {"name": "Kubeflow文档(中文)", "shortcutKey": "k", "url": "https://osmatrix.github.io/", "tooltip": "仓库osmatrix/osmatrix.github.io - Kubeflow文档站点(中文版)"},
-            {"name": "NESEG演示(WebTerminal)", "shortcutKey": "k", "url": "https://osmatrix.github.io/", "tooltip": "容器部署WebTerminal"},
+        "items":[
+            {"name": "Source", "shortcutKey": "m", "url": "https://portal.asmatrix.com/docs/", "tooltip": ""},
+            {"name": "退步集", "shortcutKey": "m", "url": "https://huhongjun.github.io/mkdocs-mydocu/", "tooltip": ""},
+            {"name": "Kubeflow文档(中文)", "shortcutKey": "k", "url": "https://osmatrix.github.io/", "tooltip": ""},
+            {"name": "NESEG演示(WebTerminal)", "shortcutKey": "k", "url": "https://osmatrix.github.io/", "tooltip": ""},
             {"name": "kodexplorer", "shortcutKey": "e", "url": "kodexplorer/", "tooltip": ""}
         ]
     },

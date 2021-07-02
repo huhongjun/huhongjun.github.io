@@ -20,14 +20,15 @@
 
 ### 项目1、入口导航页
 
-文件:   index.html,scripts.js,styles.css,/assets
+文件: index.html,scripts.js,styles.css,/assets
+用途：入口导航清单；
 
 编辑scripts.js收录网站；
 
 ### 项目2、docs目录
 
-使用_config.yml指定的Jekyll theme发布为网页；
-入口README.md;
+文件：_config.yml指定的Jekyll theme发布网页；入口README.md;  
+用途：GitHub使用指南与备忘；
 
 ### 项目x、每个子目录是一个静态网站项目
 
