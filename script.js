@@ -18,7 +18,7 @@ const MASTER_MAP = [
         "items":[
             {"name": "About my GitHub", "url": "https://huhongjun.github.io/docs/", "tooltip": ""},
             {"name": "退步集", "url": "https://huhongjun.github.io/mkdocs-mydocu/", "tooltip": ""},
-            {"name": "Kubeflow文档(中文)", "url": "https://osmatrix.github.io/", "tooltip": ""}
+            {"name": "Kubeflow文档(中文)", "url": "https://osmatrix.github.io/", "tooltip": ""},
             {"name": "pypi-neseg", "url": "https://pypi.org/project/neseg/", "tooltip": "aaaa"},
             {"name": "DS215j portal", "url": "http://ds215j", "tooltip": "aaaa"},
             {"name": "aaaa", "url": "aaaa", "tooltip": "aaaa"}           
@@ -53,9 +53,6 @@ const MASTER_MAP = [
             {"name": "portal", "url": "aaaa", "tooltip": "aaaa"},
             {"name": "static", "url": "aaaa", "tooltip": "aaaa"},
             {"name": "w3d", "url": "aaaa", "tooltip": "aaaa"},
-            {"name": "aaaa", "url": "aaaa", "tooltip": "aaaa"},
-            {"name": "aaaa", "url": "aaaa", "tooltip": "aaaa"},
-            {"name": "aaaa", "url": "aaaa", "tooltip": "aaaa"},
             {"name": "aaaa", "url": "aaaa", "tooltip": "aaaa"},
             {"name": "aaaa", "url": "aaaa", "tooltip": "aaaa"}
         ]
