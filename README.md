@@ -2,17 +2,19 @@
 
 ## 简介
 
-仓库用途：
+仅基于GitHub发布的数个站点的入口；  
+
+用途：
 
     - 发布静态网页，作为个人导航门户。
     - 个人github使用记录。
+    - 子目录mydocu，访问地址huhongjun.github.io/mydocu
 
-## 发布准备
+## GitHub发布设置
 
-    CNAME添加：portal指向huhongjun.github.io;
     启用gh-pages,指向master分支根目录;
-    设置自定义域名portal.asmatrix.com；  ;  
-    huhongjun/huhongjun.github.io，可用huhongjun.github.io； 
+    huhongjun/huhongjun.github.io，可用huhongjun.github.io访问；
+    huhongjun其余仓库的ghpages可用huhongjun.github.io/仓库名访问；
 
 ## 日常维护
 
@@ -20,7 +22,7 @@
 
 编辑scripts.js收录网站；
 
-### 项目2、docss目录
+### 项目2、docs目录
 
 使用_config.yml指定的Jekyll theme发布为网页；
 入口README.md;

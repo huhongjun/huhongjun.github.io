@@ -17,10 +17,8 @@ const MASTER_MAP = [
         "groupName": "open source",
         "items":[
             {"name": "退步集", "shortcutKey": "m", "url": "https://huhongjun.github.io/mkdocs-mydocu/", "tooltip": "个人文档站点，日常工作记录与分享。"},
-            {"name": "Kubeflow文档站点(中文版)", "shortcutKey": "k", "url": "https://osmatrix.github.io/", "tooltip": "仓库osmatrix/osmatrix.github.io - Kubeflow文档站点(中文版)"},
+            {"name": "Kubeflow文档(中文)", "shortcutKey": "k", "url": "https://osmatrix.github.io/", "tooltip": "仓库osmatrix/osmatrix.github.io - Kubeflow文档站点(中文版)"},
             {"name": "NESEG演示(WebTerminal)", "shortcutKey": "k", "url": "https://osmatrix.github.io/", "tooltip": "容器部署WebTerminal"},
-            {"name": "gridstudio", "shortcutKey": "c", "url": "http://portainer.asmatrix.com", "tooltip": ""},
-            {"name": "heimdall", "shortcutKey": "c", "url": "http://portainer.asmatrix.com", "tooltip": ""},
             {"name": "kodexplorer", "shortcutKey": "e", "url": "kodexplorer/", "tooltip": ""}
         ]
     },
@@ -34,7 +32,7 @@ const MASTER_MAP = [
     {
         "groupName": "repository",
         "items":[
-            {"name": "mkdocs-asmatrix", "shortcutKey": "c", "url": "http://portainer.asmatrix.com", "tooltip": ""},
+            {"name": "mkdocs-asmatrix", "shortcutKey": "c", "url": "https://huhongjun.github.io/asmatrix/", "tooltip": ""},
             {"name": "mkdocs-mydocu", "shortcutKey": "c", "url": "http://portainer.asmatrix.com", "tooltip": ""},
             {"name": "aaaa", "shortcutKey": "z", "url": "https://aaaa/", "tooltip": "aaaa"},
             {"name": "kodexplorer", "shortcutKey": "e", "url": "kodexplorer/", "tooltip": ""}
@@ -54,7 +52,10 @@ const MASTER_MAP = [
         "groupName": "EDLT",
         "items":[
             {"name": "计算机编程类中文书籍", "shortcutKey": "z", "url": "https://github.com/nl8590687/free-programming-books-zh_CN", "tooltip": "aaaa"},
-            {"name": "kodexplorer", "shortcutKey": "e", "url": "kodexplorer/", "tooltip": ""}
+            {"name": "kodexplorer", "shortcutKey": "e", "url": "kodexplorer/", "tooltip": ""},
+            {"shortcutKey": "z", "name": "Google协作平台", "url": "https://sites.google.com", "tooltip": "Google站点管理"},
+            {"shortcutKey": "z", "name": "Google协作平台[OS]", "url": "https://sites.google.com/a/osmatrix.info", "tooltip": "Google协作平台（osmatrix.info）"}
+
         ]
     },
     {
