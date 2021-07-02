@@ -10,4 +10,6 @@ osmatrix
 mkdocs-asmatrix
 mkdocs-desktop
 
+potree  Potree Demo + CZ2883
+
 ## 

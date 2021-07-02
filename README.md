@@ -34,3 +34,23 @@
 
 其他私有仓库不能发布gh-pages的可以生成静态网页发布到这里（actions）；
 可访问的子目录可以是此处的子目录，也有同组织其他仓库的gh-pages，前缀为仓库名；
+
+## 开发与调试
+
+vscode + liveserver extension
+
+搜索与替换(正则表达式) 
+
+[vscode官方文档](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference)
+
+    Usage：删除shortcutKey
+    Find:       "shortcutKey.:\s".".\s
+    Replace:    
+
+    Usage：取url最后面的仓库名，替换前面的name
+    Find:       \{"name": "(aaaa)",.*https://.*(\w)",
+    Replace:    {"name": "$3$2$3", 
+
+    Usage：取name，填充url
+    Find：      (\{"name": ")([\w\.-]*)(", "url": ")(https://.*/)",
+    Replace：   $1$2$3https://github.com/osmatrix/$2",
