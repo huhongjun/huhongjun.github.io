@@ -3,6 +3,9 @@
 ## 简介
 
 仅基于GitHub发布的数个站点的入口；  
+huhongjun/huhongjun.github.io，可用huhongjun.github.io访问；  
+huhongjun其余仓库的ghpages可用huhongjun.github.io/仓库名访；
+
 
 用途：
 
@@ -12,9 +15,16 @@
 
 ## GitHub发布设置
 
-    启用gh-pages,指向master分支根目录;
-    huhongjun/huhongjun.github.io，可用huhongjun.github.io访问；
-    huhongjun其余仓库的ghpages可用huhongjun.github.io/仓库名访问；
+    启用gh-pages,指向master根目录;
+    
+    // submodule: sub-desktop
+    git submodule add https://github.com/huhongjun/huhongjun.github.io.git sub-desktop
+    git config -f .gitmodules submodule.sub-desktop.branch gh-pages-desktop
+    git submodule update --remote
+
+## 日志
+
+2021.07.07  GitHub Actions同步子目录与其它仓库的gh-pages
 
 ## 日常维护
 
