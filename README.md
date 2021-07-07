@@ -17,15 +17,11 @@ huhongjun其余仓库的ghpages可用huhongjun.github.io/仓库名访；
 
     启用gh-pages,指向master根目录;
     
-    // submodule: sub-desktop
-    git submodule add https://github.com/huhongjun/huhongjun.github.io.git sub-desktop
-    git submodule remove sub-desktop
-    git config -f .gitmodules submodule.sub-desktop.branch gh-pages-desktop
-    git submodule update --remote
-
+    // 
     git rm <subtree>
-    git commit
+    git commit -m 'b4 subtree pull' -a
     git subtree add --prefix=subt-desktop https://github.com/huhongjun/huhongjun.github.io.git gh-pages-desktop
+    git subtree pull --prefix=subt-desktop https://github.com/huhongjun/huhongjun.github.io.git gh-pages-desktop
 
 ## 日志
 
