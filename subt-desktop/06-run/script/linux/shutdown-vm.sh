@@ -1,1 +1,0 @@
-ssh root@esxi "vim-cmd vmsvc/power.shutdown 53"
