@@ -1,0 +1,1 @@
+sudo vmrun -T ws start "/home/huhongjun/vmware/owrt_esir_spp/owrt_esir_spp.vmx"

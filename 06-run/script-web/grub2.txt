@@ -1,0 +1,35 @@
+# Ubuntu+Windows dual boot
+
+## 修改默认启动项
+
+	sudo gedit /etc/default/grub
+	sudo update-grub 
+
+## boot cmd line
+
+	nomodeset
+	
+## Ubuntu启动项消失的修复
+
+### 查找启动分区
+
+	ls
+	ls (hd1,gpt1)/
+	ls (hd0,gpt5)/grub
+	ls (hd0,gpt5)/boot/grub  
+
+### 设置菜单
+
+	``` bash
+	set root=(hd0,msdos3)
+	set prefix=(hd0,msdos3)/grub
+	insmod normal
+	normal   =>显示菜单并重启
+	```
+
+### 生效启用
+
+	sudo update-grub  
+
+	sudo grub-install /dev/nvme0n1	# /dev/nvme0n1是安装ubuntu分区的位置
+	sudo grub-install /dev/sda`  	# /dev/sda是硬盘号码,千万不要指定分区,如sda1,sda5等都不行

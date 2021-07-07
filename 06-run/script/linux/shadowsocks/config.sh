@@ -1,0 +1,227 @@
+#!/bin/bash
+
+urlencode() {
+    # urlencode <string>
+    old_lc_collate=$LC_COLLATE
+    LC_COLLATE=C
+
+    local length="${#1}"
+    for (( i = 0; i < length; i++ )); do
+        local c="${1:i:1}"
+        case $c in
+            [a-zA-Z0-9.~\_\-\/]) printf "$c" ;;
+            *) printf '%%%02X' "'$c" ;;
+        esac
+    done
+
+    LC_COLLATE=$old_lc_collate
+}
+
+urldecode() {
+    # urldecode <string>
+
+    local url_encoded="${1//+/ }"
+    printf '%b' "${url_encoded//%/\\x}"
+}
+
+get_docker_container_id(){
+  basename "$(cat /proc/1/cpuset)"
+}
+
+get_docker_image_name(){
+  docker inspect "$1" -f {{.Config.Image}}
+}
+
+get_default_network_interface(){
+  route | grep '^default' | grep -o '[^ ]*$'
+}
+
+get_default_network_ip(){
+  local INTERFACE=$(get_default_network_interface)
+  ifconfig $INTERFACE | grep "inet addr" | cut -d ':' -f 2 | cut -d ' ' -f 1
+}
+
+random_int(){
+  shuf -i "$1-$2" -n 1
+}
+
+port_used(){
+  local PROTOCOL="$1"
+  local PORT="$2"
+
+  netstat -lnp --$PROTOCOL|grep ":$PORT " >/dev/null 2>&1
+}
+
+find_available_port(){
+  local PROTOCOL="$1"
+  local MIN=$2
+  local MAX=$3
+  local TRIES="${4:-10}"
+
+  for ((i=1;i<=$TRIES;i+=1))
+  do
+    # echo $i
+    local PORT=$(random_int $MIN $MAX)
+    # echo $PORT
+
+    local DUMP
+    DUMP=$(port_used $PROTOCOL $PORT)
+
+    if [ $? -ne 0 ]; then
+      echo $PORT
+      return 0
+    fi
+  done
+
+  return 1
+}
+
+container_name(){
+  local SS_PORT=$1
+  local KCPTUN_PORT=$2
+
+  echo "ss-${SS_PORT}-kcp-${KCPTUN_PORT}"
+}
+
+setup_bootstrap_envs(){
+  SS_PORT=${SS_PORT:-$(find_available_port tcp 5000 20000)}
+
+  KCPTUN_PORT=${KCPTUN_PORT:-$(find_available_port udp 5000 20000)}
+
+  if [ $SS_PORT -eq $KCPTUN_PORT ]; then
+  	echo "ERROR: SS_PORT $SS_PORT is equal to KCPTUN_PORT $KCPTUN_PORT." >&2
+  	exit 1
+  fi
+
+  PASSWORD=${PASSWORD:-$(pwgen 8 1)}
+
+  SS_PASSWORD=${SS_PASSWORD:-${PASSWORD}}
+
+  KCPTUN_PASSWORD=${KCPTUN_PASSWORD:-${PASSWORD}}
+
+  SS_METHOD=${SS_METHOD:-aes-256-cfb}
+
+  KCPTUN_CRYPT=${KCPTUN_CRYPT:-aes}
+
+  KCPTUN_MODE=${KCPTUN_MODE:-normal}
+
+  SS_METHOD="${SS_METHOD:-aes-256-cfb}"
+
+  KCPTUN_CRYPT="${KCPTUN_CRYPT:-aes}"
+  
+  KCPTUN_MODE="${KCPTUN_MODE:-normal}"
+
+  KCPTUN_MTU="${KCPTUN_MTU:-1350}"
+
+  KCPTUN_SNDWND="${KCPTUN_SNDWND:-256}"
+
+  KCPTUN_CLIENT_SNDWND="${KCPTUN_CLIENT_SNDWND:-${KCPTUN_SNDWND}}"
+
+  KCPTUN_RCVWND="${KCPTUN_RCVWND:-256}"
+
+  KCPTUN_DATASHARD="${KCPTUN_DATASHARD:-10}"
+
+  KCPTUN_PARITYSHARD="${KCPTUN_PARITYSHARD:-3}"
+
+  set|grep -e '^SS_'
+  set|grep -e '^KCPTUN_'
+}
+
+generate_dood_command(){
+  local IMAGE_ID=$1
+  local HOST=$2
+
+  local SS_LINK="$(base64_ss_link $HOST)#SS:$HOST:$SS_PORT"
+  local KCPTUN_SS_LINK=$(tag_link $(kcp_ss_link $HOST) "KCPSS:$HOST:$KCPTUN_PORT")
+
+  echo "docker run -d --restart=always \
+    --name $(container_name $SS_PORT $KCPTUN_PORT) \
+    -e SS_PASSWORD=$SS_PASSWORD -e SS_METHOD=$SS_METHOD \
+    -e KCPTUN_CRYPT=$KCPTUN_CRYPT \
+    -e KCPTUN_MODE=$KCPTUN_MODE -e KCPTUN_PASSWORD=$KCPTUN_PASSWORD -e KCPTUN_MTU=$KCPTUN_MTU \
+    -e KCPTUN_SNDWND=$KCPTUN_SNDWND -e KCPTUN_RCVWND=$KCPTUN_RCVWND \
+    -e KCPTUN_DATASHARD=$KCPTUN_DATASHARD -e KCPTUN_PARITYSHARD=$KCPTUN_PARITYSHARD \
+    -e SS_LINK=$SS_LINK -e KCPTUN_SS_LINK=$KCPTUN_SS_LINK \
+    --log-opt max-size=200k --log-opt max-file=1 \
+    -p $SS_PORT:8338/tcp -p $SS_PORT:8338/udp -p $KCPTUN_PORT:41111/udp $IMAGE_ID"
+}
+
+ss_link(){
+  local HOST=$1
+
+  local USER_INFO=`echo -n $SS_METHOD:$SS_PASSWORD|base64`
+
+  echo "ss://$USER_INFO@$HOST:$SS_PORT"
+}
+
+base64_ss_link(){
+  # according to https://shadowsocks.org/en/config/quick-guide.html
+  # compatible with Shadowsocks QT5 and Shadowsocks Android
+
+  local HOST=$1
+
+  local ENCODED=`echo -n $SS_METHOD:$SS_PASSWORD@$HOST:$SS_PORT|base64|tr -d "\n"`
+
+  echo "ss://$ENCODED"
+}
+
+kcp_ss_link(){
+  # according to https://shadowsocks.org/en/spec/SIP002-URI-Scheme.html
+  # compatible with Shadowsocks Android
+
+  local HOST=$1
+
+  local USER_INFO=`echo -n $SS_METHOD:$SS_PASSWORD|base64`
+
+  local RAW_KCPTUN_PLUGIN_STR="kcptun;crypt=$KCPTUN_CRYPT;mode=$KCPTUN_MODE"
+  RAW_KCPTUN_PLUGIN_STR+=";rcvwnd=$KCPTUN_RCVWND;sndwnd=$KCPTUN_CLIENT_SNDWND;key=$KCPTUN_PASSWORD;mtu=$KCPTUN_MTU"
+  RAW_KCPTUN_PLUGIN_STR+=";datashard=$KCPTUN_DATASHARD;parityshard=$KCPTUN_PARITYSHARD"
+
+  echo "ss://$USER_INFO@$HOST:$KCPTUN_PORT?plugin=$(urlencode $RAW_KCPTUN_PLUGIN_STR)"
+}
+
+tag_link(){
+  local LINK=$1
+  local TAG=$2
+
+  echo "$LINK#$(urlencode $TAG)"
+}
+
+qr_link(){
+  local LINK=$1
+
+  echo "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=$(urlencode $LINK)"
+}
+
+shorten_link(){
+  local LINK=$1
+  local ISGD_URL="https://is.gd/create.php?format=simple&url=$(urlencode $LINK)"
+
+  # echo $ISGD_URL
+  curl -s "$ISGD_URL"
+}
+
+# #######################################
+#
+#
+#########################################
+
+
+if [ -z "$SS_LINK" ]; then
+    SS_LINK="$(base64_ss_link $HOST $SS_PORT $SS_PASSWORD $SS_METHOD)#SS:$HOST:$SS_PORT"
+fi
+
+if [ -z "$KCPTUN_SS_LINK" ]; then
+    KCPTUN_SS_LINK=$(tag_link $(kcp_ss_link $HOST $SS_PORT $SS_PASSWORD $KCPTUN_PORT $KCPTUN_PASSWORD $SS_METHOD $KCPTUN_CRYPT) "KCP_SS:$HOST:$KCPTUN_PORT")
+fi
+
+echo "Shadowsocks link: $SS_LINK"
+echo
+echo "QR code: $(qr_link $SS_LINK)"
+echo
+echo "----"
+echo
+echo "KCPTUN SS link (for Android and Windows clients): $KCPTUN_SS_LINK"
+echo
+echo "QR code: $(qr_link $KCPTUN_SS_LINK)"
+echo

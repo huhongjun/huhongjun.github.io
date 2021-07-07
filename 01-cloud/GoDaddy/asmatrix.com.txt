@@ -1,0 +1,55 @@
+﻿; Domain: asmatrix.com
+; Exported (y-m-d hh:mm:ss): 2017-10-13 14:10:46
+;
+; This file is intended for use for informational and archival
+; purposes ONLY and MUST be edited before use on a production
+; DNS server.
+;
+; In particular, you must update the SOA record with the correct
+; authoritative name server and contact e-mail address information,
+; and add the correct NS records for the name servers which will
+; be authoritative for this domain.
+;
+; For further information, please consult the BIND documentation
+; located on the following website:
+;
+; http://www.isc.org/
+;
+; And RFC 1035:
+;
+; http://www.ietf.org/rfc/rfc1035.txt
+;
+; Please note that we do NOT offer technical support for any use
+; of this zone data, the BIND name server, or any other third-
+; party DNS software.
+;
+; Use at your own risk.
+
+; SOA Record
+asmatrix.com.	600	IN	SOA	ns23.domaincontrol.com.	dns.jomax.net (
+				2017101311
+				28800
+				7200
+				604800
+				600
+				)
+
+; A Records
+ecs	600	IN	A	59.110.166.35
+niislms	600	IN	A	59.110.166.35
+tomcat	600	IN	A	52.15.132.138
+@	600	IN	A	52.15.132.138
+huhongjun	600	IN	A	121.42.77.136
+
+; CNAME Records
+web	3600	IN	CNAME	@
+api	600	IN	CNAME	@
+proxy	600	IN	CNAME	@
+demo	600	IN	CNAME	d16x8z8mpj0w6.cloudfront.net
+_domainconnect	3600	IN	CNAME	_domainconnect.gd.domaincontrol.com
+upupw	600	IN	CNAME	@
+www	3600	IN	CNAME	@
+
+; NS Records
+@	3600	IN	NS	ns24.domaincontrol.com
+@	3600	IN	NS	ns23.domaincontrol.com
