@@ -1,6 +1,0 @@
-[submodule "sub-desktop"]
-	path = sub-desktop
-	url = https://github.com/huhongjun/huhongjun.github.io.git
-	branch = gh-pages-desktop
-[submodule "DbConnector"]
-	branch = gh-pages-desktop
