@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
-     <loc>http://huhongjun.github.io/mydocu/</loc>
+     <loc>http://huhongjun.github.io/subt-mydocu/</loc>
      <lastmod>2021-07-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://huhongjun.github.io/mydocu/00-publish/%E5%85%B3%E4%BA%8E%E5%A4%87%E4%BB%BD/</loc>
+     <loc>http://huhongjun.github.io/subt-mydocu/00-publish/%E5%85%B3%E4%BA%8E%E5%A4%87%E4%BB%BD/</loc>
      <lastmod>2021-07-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://huhongjun.github.io/mydocu/00-publish/ADeveloper/</loc>
+     <loc>http://huhongjun.github.io/subt-mydocu/00-publish/ADeveloper/</loc>
      <lastmod>2021-07-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://huhongjun.github.io/mydocu/00-publish/AWS-S3/</loc>
+     <loc>http://huhongjun.github.io/subt-mydocu/00-publish/AWS-S3/</loc>
      <lastmod>2021-07-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://huhongjun.github.io/mydocu/00-publish/aws/</loc>
+     <loc>http://huhongjun.github.io/subt-mydocu/00-publish/aws/</loc>
      <lastmod>2021-07-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://huhongjun.github.io/mydocu/00-publish/conda-%E5%A4%87%E7%94%A8%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/</loc>
+     <loc>http://huhongjun.github.io/subt-mydocu/00-publish/conda-%E5%A4%87%E7%94%A8%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/</loc>
      <lastmod>2021-07-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://huhongjun.github.io/mydocu/00-publish/ESXi-%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%B8%85%E5%8D%95/</loc>
+     <loc>http://huhongjun.github.io/subt-mydocu/00-publish/ESXi-%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%B8%85%E5%8D%95/</loc>
      <lastmod>2021-07-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://huhongjun.github.io/mydocu/00-publish/GitHub/</loc>
+     <loc>http://huhongjun.github.io/subt-mydocu/00-publish/GitHub/</loc>
      <lastmod>2021-07-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://huhongjun.github.io/mydocu/02-toolset/hugo/</loc>
+     <loc>http://huhongjun.github.io/subt-mydocu/02-toolset/hugo/</loc>
      <lastmod>2021-07-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>http://huhongjun.github.io/mydocu/02-toolset/mkdocs/</loc>
+     <loc>http://huhongjun.github.io/subt-mydocu/02-toolset/mkdocs/</loc>
      <lastmod>2021-07-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
