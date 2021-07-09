@@ -27,7 +27,7 @@ huhongjun其余仓库的gh-pages可用huhongjun.github.io/仓库名访问；
     repo_url=https://github.com/huhongjun/mkdocs-asmatrix.git
     repo_branch=gh-pages
 
-    git rm ${subtree_dir}
+    git rm -r ${subtree_dir}
     git commit -m 'b4 subtree pull' -a
     git subtree add --prefix=${subtree_dir} ${repo_url} ${repo_branch}
     git subtree pull --prefix=${subtree_dir} ${repo_url} ${repo_branch}
