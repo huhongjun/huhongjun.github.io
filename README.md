@@ -4,7 +4,7 @@
 
 仅基于GitHub发布的数个站点的入口；  
 huhongjun/huhongjun.github.io，可用huhongjun.github.io访问；  
-huhongjun其余仓库的ghpages可用huhongjun.github.io/仓库名访；
+huhongjun其余仓库的gh-pages可用huhongjun.github.io/仓库名访问；
 
 
 用途：
@@ -17,21 +17,19 @@ huhongjun其余仓库的ghpages可用huhongjun.github.io/仓库名访；
 
     启用gh-pages,指向master根目录;
     
-    # 逆初始化模块，其中{MOD_NAME}为模块目录，执行后可发现模块目录被清空
-    git submodule deinit sub-desktop
-    # 删除.gitmodules中记录的模块信息（--cached选项清除.git/modules中的缓存）
-    git rm --cached sub-desktop
-    # 提交更改到代码库，可观察到'.gitmodules'内容发生变更
-    git commit -am "Remove a submodule." 
-
     // 
-    git rm <subtree>
+    subtree_dir=subt-desktop
+    repo_url=https://github.com/huhongjun/huhongjun.github.io.git
+    repo_branch=gh-pages-desktop
+
+    git rm ${subtree_dir}
+    git subtree add --prefix=${subtree_dir} ${repo_url} ${repo_branch}
     git commit -m 'b4 subtree pull' -a
-    git subtree add  --prefix=subt-desktop https://github.com/huhongjun/huhongjun.github.io.git gh-pages-desktop
-    git subtree pull --prefix=subt-desktop https://github.com/huhongjun/huhongjun.github.io.git gh-pages-desktop
+    git subtree pull --prefix=${subtree_dir} ${repo_url} ${repo_branch}
 
-    git subtree add  --prefix=subt-asmatrix https://github.com/huhongjun/mkdocs-asmatrix.git gh-pages
-
+    subt-asmatrix
+    https://github.com/huhongjun/mkdocs-asmatrix.git
+    gh-pages-asmatrix
 
 ## 日志
 
