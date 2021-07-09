@@ -6,7 +6,6 @@
 huhongjun/huhongjun.github.io，可用huhongjun.github.io访问；  
 huhongjun其余仓库的gh-pages可用huhongjun.github.io/仓库名访问；
 
-
 用途：
 
     - 发布静态网页，作为个人导航门户。
@@ -17,7 +16,7 @@ huhongjun其余仓库的gh-pages可用huhongjun.github.io/仓库名访问；
 
     启用gh-pages,指向master根目录;
     
- 
+    ./subtree-add.sh
  
  
  
