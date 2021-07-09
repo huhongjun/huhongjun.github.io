@@ -17,20 +17,20 @@ huhongjun其余仓库的gh-pages可用huhongjun.github.io/仓库名访问；
 
     启用gh-pages,指向master根目录;
     
-    // subt-desktop
-    subtree_dir=subt-desktop
-    repo_url=https://github.com/huhongjun/huhongjun.github.io.git
-    repo_branch=gh-pages-desktop
+ 
+ 
+ 
+ 
 
-    // subt-asmatrix
-    subtree_dir=subt-asmatrix
-    repo_url=https://github.com/huhongjun/mkdocs-asmatrix.git
-    repo_branch=gh-pages
+ 
+ 
+ 
+ 
 
-    git rm -r ${subtree_dir}
-    git commit -m 'b4 subtree pull' -a
-    git subtree add --prefix=${subtree_dir} ${repo_url} ${repo_branch}
-    git subtree pull --prefix=${subtree_dir} ${repo_url} ${repo_branch}
+ 
+ 
+ 
+ 
 
 ## 日志
 
