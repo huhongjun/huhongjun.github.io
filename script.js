@@ -28,17 +28,17 @@ const MASTER_MAP = [
         "groupName": "Bitbucket,gitlab,gitee",
         "items":[
             {"name": "toutiao", "url": "https://gitlab.com/huhongjun/toutiao", "tooltip": "今日头条创作。"},
-            {"name": "docu-gdqx", "url": "https://bitbucket.org/huhongjun/docu-gdqx/", "tooltip": "aaaa"},
-            {"name": "docu-niislms", "url": "aaaa", "tooltip": "aaaa"},
-            {"name": "docu-elgg", "url": "aaaa", "tooltip": "aaaa"},
-            {"name": "blcms", "url": "aaaa", "tooltip": "aaaa"},
-            {"name": "harmony3", "url": "aaaa", "tooltip": "aaaa"},
-            {"name": "edltsns", "url": "aaaa", "tooltip": "aaaa"},
-            {"name": "lab-test", "url": "aaaa", "tooltip": "aaaa"},
-            {"name": "blsms", "url": "aaaa", "tooltip": "aaaa"},
-            {"name": "ne-segmentation", "url": "aaaa", "tooltip": "aaaa"},
-            {"name": "harmony3-github", "url": "aaaa", "tooltip": "aaaa"},
-            {"name": "aaaa", "url": "aaaa", "tooltip": "aaaa"}
+            {"name": "docu-gdqx", "url": "https://bitbucket.org/huhongjun/docu-gdqx", "tooltip": "aaaa"},
+            {"name": "docu-niislms", "url": "https://bitbucket.org/huhongjun/docu-niislms", "tooltip": "aaaa"},
+            {"name": "docu-elgg", "url": "https://bitbucket.org/huhongjun/docu-elgg", "tooltip": "aaaa"},
+            {"name": "blcms", "url": "https://bitbucket.org/huhongjun/blcms", "tooltip": "aaaa"},
+            {"name": "harmony3", "url": "https://bitbucket.org/huhongjun/harmony3", "tooltip": "aaaa"},
+            {"name": "edltsns", "url": "https://bitbucket.org/huhongjun/edltsns", "tooltip": "aaaa"},
+            {"name": "lab-test", "url": "https://bitbucket.org/huhongjun/lab-test", "tooltip": "aaaa"},
+            {"name": "blsms", "url": "https://bitbucket.org/huhongjun/blsms", "tooltip": "aaaa"},
+            {"name": "ne-segmentation", "url": "https://bitbucket.org/huhongjun/ne-segmentation", "tooltip": "aaaa"},
+            {"name": "harmony3-github", "url": "https://bitbucket.org/huhongjun/harmony3-github", "tooltip": "aaaa"},
+            {"name": "aaaa", "url": "https://bitbucket.org/huhongjun/aaaa", "tooltip": "aaaa"}
         ]
     },
     {
@@ -46,13 +46,13 @@ const MASTER_MAP = [
         "items":[
             {"name": "Potree Demo", "url": "https://huhongjun.github.io/potree/Potree/examples/viewer.html", "tooltip": "aaaa"},
             {"name": "awstutor", "url": "awstutor.asmatrix.com", "tooltip": "aaaa"},
-            {"name": "courseware", "url": "aaaa", "tooltip": "aaaa"},
-            {"name": "exam", "url": "aaaa", "tooltip": "aaaa"},
-            {"name": "gateway", "url": "aaaa", "tooltip": "aaaa"},
-            {"name": "nps", "url": "aaaa", "tooltip": "aaaa"},
-            {"name": "portal", "url": "aaaa", "tooltip": "aaaa"},
-            {"name": "static", "url": "aaaa", "tooltip": "aaaa"},
-            {"name": "w3d", "url": "aaaa", "tooltip": "aaaa"},
+            {"name": "courseware", "url": "courseware.asmatrix.com", "tooltip": "aaaa"},
+            {"name": "exam", "url": "exam.asmatrix.com", "tooltip": "aaaa"},
+            {"name": "gateway", "url": "gateway.asmatrix.com", "tooltip": "aaaa"},
+            {"name": "nps", "url": "nps.asmatrix.com", "tooltip": "aaaa"},
+            {"name": "portal", "url": "portal.asmatrix.com", "tooltip": "aaaa"},
+            {"name": "static", "url": "static.asmatrix.com", "tooltip": "aaaa"},
+            {"name": "w3d", "url": "w3d.asmatrix.com", "tooltip": "aaaa"},
             {"name": "aaaa", "url": "aaaa", "tooltip": "aaaa"},
             {"name": "aaaa", "url": "aaaa", "tooltip": "aaaa"}
         ]

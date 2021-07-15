@@ -18,20 +18,7 @@ huhongjun其余仓库的gh-pages可用huhongjun.github.io/仓库名访问；
     
     ./subtree-add.sh
  
- 
- 
-
- 
- 
- 
- 
-
- 
- 
- 
- 
-
-## 日志
+ ## 日志
 
 2021.07.07  GitHub Actions同步子目录与其它仓库的gh-pages
 
